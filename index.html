@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeReadsHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden {
+            display : none;
+        }
+        
+        #LoginPage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20%;
+            height: 400px;
+            padding: 20px
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+        #BackButton {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <section class="grid grid-rows-1 ">
+        <div>
+        <header >
+            <h1 class="font-bold text-purple-950 text-6xl text-center py-3  ">
+                FreeReadsHub
+            </h1>
+        </header> 
+        </div>        
+    <div class="grid grid-rows-1 ">
+        <nav class=" bg-gray-200 text-black flex font-serif rounded-3xl justify-center  ">
+            <ul class="flex space-x-12 py-2 px-8">
+                <li class="cursor-pointer" data-scroll-to="home">Home</li>
+                <li class="cursor-pointer" data-scroll-to="Best-Sellers">Best Sellers</li>
+                <li class="cursor-pointer" data-scroll-to="New">New</li>
+                <li class="cursor-pointer" data-scroll-to="Popular">Popular</li>
+                <li class="cursor-pointer" data-scroll-to="About">About</li>
+                <li class="cursor-pointer" data-scroll-to="Contact">Contact</li>
+            </ul>   
+        </nav>
+    </div>
+    </section>
+    <section id="Home">
+        <div class="grid grid-cols-2 md:grid-cols-2">
+
+            <main class=" ml-20 ">
+                <div class="font-extrabold text-purple-900  pt-20 text-6xl font-serif grid pb-6 " >
+                E-BOOKS
+                </div>
+                <div class=" font-serif text-4xl text-purple-900 grid pb-4 ">
+                    Discover Your Next Favorite Read: <br>
+                    Free eBooks Await!
+                </div>
+                <div class="font-sans text-purple-900 grid pb-6  ">
+                    Explore thrilling mysteries, heartwarming romances, and mind-bending <br>sci-fi adventures—all for free! Start reading today!
+                </div>    
+                <div>
+                    <button id="StartNowButton" class="bg-purple-900  px-6 py-1 rounded-xl mr-4 tracking-wider text-white hover:text-gray-300 hover:bg-gray-900">Start Now</button>
+                </div>      
+            </main>
+  
+
+            <div class=" flex justify-end ">
+                <div class="mr-20 ml-20">
+                    <img src="123.jpeg" alt="e-reading-tablet" class=" pt-20 rounded-lg pb-10 ">
+                </div>
+            </div>   
+        </div>
+        <section id="LoginPage" class=" bg-white hidden ">
+            <div class="flex items-center justify-center h-full">
+                <div class="border-6 border-double border-gray-600 p-1 rounded-2xl shadow-lg">
+                    <h1 class="font-bold text-center text-sans text-4xl">Login</h1>
+                    <form id="LoginForm">
+                        <div class="mb-4">
+                            <label for="Name" class="block">Name</label>
+                            <input type="text" id="Name" name="Name" class="block w-full px-3 py-2 border border-gray-600 rounded-md" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="E-mail Address" class="block">E-mail Address</label>
+                            <input type="email" id="E-mail Address" name="E-mail Address" class="block w-full px-3 py-2 border border-gray-600 rounded-md" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="Password" class="block">Password</label>
+                            <input type="password" id="Password" name="Password" class="block w-full px-3 py-2 border border-gray-600 rounded-md" required>
+                        </div>
+                        <div class="text-center">
+                            <button id="SignUpButton" class="bg-blue-600 text-white px-4 py-2 rounded-md mr-4 hover:text-gray-300 hover:bg-blue-900 ">Sign Up</button>
+                            <button id="SignInButton" class="bg-blue-300 text-white px-4 py-2 rounded-md hover:text-gray-300 hover:bg-blue-900">Sign In</button>
+                        </div>
+                    </form>
+                    <div class="text-center mt-4">
+                        <button id="BackButton" class="text-gray-600">Back</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    
+    </section>  
+
+    <section class="bg-white w-full pb-24">
+        <div class="grid grid-cols-2 ">
+            <div class=" flex justify-center items-center pt-32">
+                <img src="img.png" alt="e-book and books" style="width: 300px; height: 300px;">
+            </div>
+            <div>
+                <div class="items-center mr-20 pt-36 text-center">
+                    <p class="font-bold pg-2">"Welcome to FreeReadsHub, your gateway to a world of captivating ebooks!"</p>
+                    <p>Dive into a treasure trove of literary wonders, from thrilling mysteries to heartwarming romances and mind-bending sci-fi adventures—all at your fingertips and all for free! <br> Discover your next favorite read with our carefully curated collection of ebooks. Whether you're looking for a gripping page-turner or a soul-stirring narrative, FreeReadsHub has something for everyone. <br> Join our community of book lovers today and start exploring the vast universe of free ebooks. Sign up now and embark on a reading journey like never before!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>  
+
+    <section id="Best-Sellers" class="bg-gray-100">
+        <div>
+            <header class="font-serif pt-10 text-2xl ml-20">
+                Best Sellers
+            </header>
+            <div class="grid grid-cols-4 gap-4 mt-6 ml-20 mr-20 object-contain ">
+                <img src="1.jpg" alt="Atomic Habits by James Clear" class="cursor-pointer">
+                <img src="2.jpg" alt="Harry Potter by J.K. Rowling" class="cursor-pointer">
+                <img src="3.jpg" alt="Nightbane by Alex Aster" class="cursor-pointer">
+                <img src="4.jpg" alt="How to know a person by David Brooks" class="cursor-pointer">
+
+            </div>
+            <div class="grid grid-cols-4 gap-4 mt-6 ml-20 mr-20 pb-10">
+                <div >
+                    <header class="font-bold upper-case cursor-pointer">
+                        Atomic Habits
+                    </header>
+                    <p>by James Clear</p>
+                </div>
+                <div >
+                    <header class="font-bold upper-case cursor-pointer">
+                        Harry potter
+                    </header>
+                    <p>by J.K. Rowling</p>
+                </div>
+                <div >
+                    <header class="font-bold upper-case cursor-pointer">
+                        Nightbane
+                    </header>
+                    <p>by Alex Aster</p>
+                </div>
+                <div >
+                    <header class="font-bold upper-case cursor-pointer">
+                        How to know a person
+                    </header>
+                    <p>by David Brooks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="New" class="bg-white">
+        <div>
+            <header class="font-serif pt-10 text-2xl ml-20">
+                New
+            </header>
+            <div class="grid grid-cols-4 gap-4 mt-6 ml-20 mr-20 object-contain ">
+                <img src="11.jpg" alt="Caste by Isabel Wilkerson" class="cursor-pointer">
+                <img src="12.jpg" alt="The Boys in the boat by Daniel James Brown" class="cursor-pointer">
+                <img src="13.jpg" alt="Medgar and myrlie Joy-Ann Reid" class="cursor-pointer">
+                <img src="14.jpg" alt="The Women by Kristin Hannah" class="cursor-pointer">
+
+            </div>
+            <div class="grid grid-cols-4 gap-4 mt-6 ml-20 mr-20 pb-10">
+                <div >
+                    <header class="font-bold upper-case cursor-pointer">
+                        Caste
+                    </header>
+                    <p>by Isabel Wilkerson</p>
+                </div>
+                <div >
+                    <header class="font-bold upper-case cursor-pointer">
+                        The Boys in the boat
+                    </header>
+                    <p>by Daniel James Brown</p>
+                </div>
+                <div >
+                    <header class="font-bold upper-case cursor-pointer">
+                        Medgar and myrlie
+                    </header>
+                    <p>by Joy-Ann Reid</p>
+                </div>
+                <div >
+                    <header class="font-bold upper-case cursor-pointer">
+                        The Women
+                    </header>
+                    <p>by Kristin Hannah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Popular" class="bg-gray-100">
+        <div>
+            <header class="font-serif pt-10 text-2xl ml-20">
+                Popular
+            </header>
+            <div class="grid grid-cols-4 gap-4 mt-6 ml-20 mr-20 object-contain ">
+                <img src="111.jpg" alt="The Wager by David Grann" class="cursor-pointer">
+                <img src="122.jpg" alt="Killers of the Flower Moon by David Grann" class="cursor-pointer">
+                <img src="133.jpg" alt="Refuge by Alan Gratz" class="cursor-pointer">
+                <img src="144.jpg" alt="Powerless by " class="cursor-pointer">
+
+            </div>
+            <div class="grid grid-cols-4 gap-4 mt-6 ml-20 mr-20 pb-10">
+                <div >
+                    <header class="font-bold upper-case cursor-pointer">
+                        The Wager
+                    </header>
+                    <p>by David Grann</p>
+                </div>
+                <div >
+                    <header class="font-bold upper-case cursor-pointer">
+                        Killers of the Flower Moon
+                    </header>
+                    <p>by David Grann</p>
+                </div>
+                <div >
+                    <header class="font-bold upper-case cursor-pointer">
+                        Refuge 
+                    </header>
+                    <p>by Alan Gratz</p>
+                </div>
+                <div >
+                    <header class="font-bold upper-case cursor-pointer">
+                        Powerless
+                    </header>
+                    <p>by Lauren Roberts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="About" class="bg-white">
+        <div>
+            <header class="font-serif text-center text-4xl pt-20  pb-28">
+                About Us
+            </header>
+            <div class="font-serif text-center text-2xl  ml-60 mr-60 pb-40">
+                "Our mission is to democratize access to a diverse selection of high-quality ebooks, fostering a passion for reading and lifelong learning. We invite you to join us in cultivating a community where each reader can embark on a journey of discovery, exploration, and personal growth through the transformative power of literature."
+            </div>    
+        </div>
+    </section>
+
+    
+    <section id="Contact" class="bg-gray-100">
+        <div class="mx-8">
+            <header class="font-serif text-center text-4xl pt-20  pb-24">
+                Contact Us
+            </header>
+            <div class="ml-40 text-2xl ">
+                <div class="flex">
+                <p class="font-bold ">Email :</p><p class="pb-2 ml-8"> info@freereadshub.com </p>
+                </div>
+                <div class="flex">
+                <p class="font-bold">Phone :</p><p class="pb-2 ml-8"> 123-456-7890 </p> 
+                </div>
+                <div class="flex">
+                <p class="font-bold">Address :</p><address class="pb-2 ml-8"> 123 Main St, Karachi</address>  
+                </div>
+                <div class="flex">
+                <p class="font-bold">Contact Us With :</p><p class=" ml-8 pb-24"> Facebook  |  Twitter  |  LinkedIn </p>  
+                </div>
+                <div class="pt-6 text-center underline text-green-600 pb-4 cursor-pointer">
+                    Privacy Policy and Terms of Service
+                </div>
+
+            </div>     
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('[data-scroll-to]');
+    
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-scroll-to');
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });    
+        document.addEventListener('DOMContentLoaded', function() {
+    let isSignUp = true;
+
+
+    function showLoginForm() {
+        document.getElementById('LoginPage').classList.remove('hidden');
+    }
+
+    function hideLoginForm() {
+        document.getElementById('LoginPage').classList.add('hidden');
+    }
+
+  
+    function toggleForm() {
+        isSignUp = !isSignUp; 
+        const nameField = document.getElementById('Name').parentNode;
+
+        if (isSignUp) {
+            nameField.style.display = 'block'; 
+            document.getElementById('SignUpButton').style.display = 'none'; 
+            document.getElementById('SignInButton').style.display = 'inline-block'; 
+        } else {
+            nameField.style.display = 'none'; 
+            document.getElementById('SignUpButton').style.display = 'inline-block'; 
+            document.getElementById('SignInButton').style.display = 'none'; 
+        }
+    }
+
+    document.getElementById('StartNowButton').addEventListener('click', function() {
+        showLoginForm();
+    });
+
+    document.getElementById('BackButton').addEventListener('click', function() {
+        hideLoginForm();
+    });
+
+    document.getElementById('SignInButton').addEventListener('click', function() {
+        toggleForm();
+    });
+
+    document.getElementById('SignUpButton').addEventListener('click', function() {
+        toggleForm();
+    });
+});
+
+    </script>
+
+</body>
+</html>
